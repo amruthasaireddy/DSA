@@ -47,3 +47,45 @@ Add both i and n / i as divisors (avoid duplicates for perfect squares).
 Sort the list of divisors in ascending order.
 
 Print each divisor from the sorted list.
+
+2.Largest Element - Optimal Solution
+Approach
+Initialize a variable with the first element of the array (i.e., max = arr[0]).
+
+Traverse the array starting from the second element. During the iteration, update the variable if a larger element is found.
+
+After completing the iteration, the variable holds the largest element, which is then printed.
+Explanation:
+
+Initialization:
+
+Set the variable max to the first element of the array (arr[0]).
+For Loop:
+
+Use a for loop to iterate from the second element (index 1) to the last element (index n-1).
+Conditional Check:
+
+Within the loop, check if the current element (arr[i]) is greater than the current maximum value (max).
+
+If true, update max to the current element.
+
+Print Statement:
+
+After the loop, print the value of max, which now contains the largest element in the array.
+ Pseudo Code
+largestElement(arr, n) {
+    max = arr[0]
+    for i from 1 to n-1 {
+         if (arr[i] > max) {
+             max = arr[i]
+         }
+    }
+    print(max)
+}
+Complexity Analysis
+Time Complexity O(n)
+
+The algorithm runs in O(n) time since it involves a single traversal from index 0 to index n - 1.
+Space Complexity O(1)
+
+The space complexity is O(1) because the algorithm uses only a constant amount of extra space.
